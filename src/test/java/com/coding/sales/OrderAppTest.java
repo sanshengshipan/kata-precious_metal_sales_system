@@ -16,7 +16,9 @@ public class OrderAppTest {
     public static Collection<Object[]> parameters() {
         Object[][] data = new Object[][]{
                 {"sample_command.json", "sample_result.txt"},
-                {"test01_command.json", "test01_result.txt"}
+                {"test01_command.json", "test01_result.txt"},
+                {"test02_command.json", "test02_result.txt"},
+                {"test_command.json", "test_result.txt"}
         };
 
         return Arrays.asList(data);
