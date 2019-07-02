@@ -16,6 +16,7 @@ public class OrderAppTest {
     public static Collection<Object[]> parameters() {
         Object[][] data = new Object[][]{
                 {"sample_command.json", "sample_result.txt"},
+                {"test01_command.json", "test01_result.txt"}
         };
 
         return Arrays.asList(data);
@@ -34,9 +35,9 @@ public class OrderAppTest {
         String orderCommand = FileUtils.readFromFile(getResourceFilePath(commandFileName));
         OrderApp app = new OrderApp();
         String actualResult = app.checkout(orderCommand);
-
+        System.out.println("actualResult:="+actualResult);
         String expectedResult = FileUtils.readFromFile(getResourceFilePath(expectedResultFileName));
-
+        System.out.println("expectedResult:="+expectedResult);
         assertEquals(expectedResult, actualResult);
     }
 
